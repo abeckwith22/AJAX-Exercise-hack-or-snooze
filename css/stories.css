@@ -16,7 +16,6 @@
   margin: 20px 30px;
 }
 
-
 /* Individual stories */
 
 .story-favorite {
@@ -32,7 +31,23 @@
   margin: 18px 0;
 }
 
+.story-div {
+}
+
+.story-author {
+  display: block;
+  color: green;
+  font-size: 1em;
+}
+
+.story-user {
+  display: block;
+  color:darkgoldenrod; 
+  padding-left: 2em;
+}
+
 .story-delete-button {
+  display:inline-block;
   cursor: pointer;
   border-style: none;
   border-radius: 0.2em;

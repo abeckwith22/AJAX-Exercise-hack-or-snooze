@@ -4,17 +4,31 @@ nav {
   display: flex;
   background-color: #ff6600;
   align-items: center;
-  padding: 5px 20px;
+  /* padding: 5px 20px; */
+  padding: 2em 0.5em;
   border-radius: 3px 3px 0 0;
 }
 
 .navbar-brand {
   font-weight: bold;
+  /* padding: 1em; */
 }
 
 .nav-link {
   font-size: 0.85rem;
   margin: 0 3px;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  font-weight:500;
+}
+
+.nav-left {
+  margin-left: 1em;
+}
+.nav-link-span {
+  border-left: solid 2px black;
 }
 
 .nav-right {

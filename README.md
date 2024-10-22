@@ -62,12 +62,13 @@ As before, it's best to write the data-logic and API-call part first, and do the
 - [x] Allow logged in users to *favorite* and *un-favorite* a story. These stories should remain favorited when the page refreshes.
 - [x] Allow logged in users to see a separate list of favorited stories.
 
+**The methods for adding and removing favorite status on a story should be defined in the User class.**
+
 ### Part 4: Removing Stories
 
-- [ ] Allow logged in users to remove a story. Once a story has been deleted, remove it from the DOM and let the API know its been deleted.
+- [x] Allow logged in users to remove a story. Once a story has been deleted, remove it from the DOM and let the API know its been deleted.
+
 
 ### Part 5: Styling
 
-- [ ] Restyle the landing and login page to match this mock-up-provided by a designer
-
-**The methods for adding and removing favorite status on a story should be defined in the User class.**
+- [x] Restyle the landing and login page to match this mock-up-provided by a designer

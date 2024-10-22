@@ -29,12 +29,28 @@ $navLogin.on("click", navLoginClick);
 function navAddStoryClick(evt) {
   console.debug("navAddStoryClick", evt);
   hidePageComponents();
-  console.log("Showing add story component (hopefully...)");
-  $navAddStory.hide();
   $newStoryForm.show();
 }
 
 $navAddStory.on("click", navAddStoryClick);
+
+/** Show users favorited stories */
+function navViewFavoriteStories(evt) {
+  console.debug("navViewFavoriteStories", evt);
+  hidePageComponents();
+  putFavoriteStoriesOnPage(evt);
+}
+
+$navShowFavorites.on("click", navViewFavoriteStories);
+
+/** Show users submitted stories */
+function navViewUserStories(evt){
+  console.debug("navViewUserStories", evt);
+  hidePageComponents();
+  putCurrentUserStoriesOnPage(evt);
+}
+
+$navShowUserStories.on("click", navViewUserStories);
 
 /** When a user first logins in, update the navbar to reflect that. */
 

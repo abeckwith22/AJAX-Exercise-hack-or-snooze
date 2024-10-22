@@ -89,7 +89,7 @@ class StoryList {
       const { story } = response.data;
 
       const newStoryObj = new Story(story);
-      this.stories.append(newStoryObj);
+      this.stories.push(newStoryObj);
       return newStoryObj;
     }catch(err){
       console.error(err);
@@ -105,6 +105,26 @@ class StoryList {
         method: "DELETE",
         data: { token: loginToken },
       });
+
+      console.log(response.data);
+      const deletedStoryId = response.data.story.storyId;
+
+      // helper function to remove any stories from the DOM
+      const removeFromArray = (arr, deletedStoryId) => {
+        const newArr = [];
+        arr.map(i => i.storyId !== deletedStoryId ? newArr.push(i) : "");
+        return newArr;
+      }
+
+      // remove from favorites and ownStories
+      const newFavorites = removeFromArray(currentUser.favorites, deletedStoryId);
+      const newOwnStories = removeFromArray(currentUser.ownStories, deletedStoryId);
+
+      console.log(newFavorites);
+      console.log(newOwnStories);
+
+      currentUser.favorites = newFavorites;
+      currentUser.ownStories = newOwnStories;
 
       return response.data;
 
